@@ -11,16 +11,16 @@
 <body>
     <form>
         <div>
-            <input type="text" name="" id="nome">
+            <input type="text" required="required" id="nome">
             <label for="nome">Nome</label>
 
-            <input type="email" name="" id="email">
+            <input type="text" required="required" id="email">
             <label for="email">E-mail</label>
 
-            <input type="tel" name="" id="tel">
+            <input type="tel" required="required" id="tel">
             <label for="tel">Telefone</label>
 
-            <input type="url" name="" id="site">
+            <input type="text" required="required" id="site">
             <label for="site">Site da empresa</label>
         </div>
     </form>
@@ -74,6 +74,7 @@
             color: darkviolet;
             font-family: 'Bebas Neue', cursive;
             font-size: 18px;
+            height: 13px;
         }
         
         label[for='site'] {
@@ -96,22 +97,26 @@
             width: 56px;
         }
         
-        input[type='text']:focus~label[for='nome'] {
+        #nome:valid~label[for='nome'],
+        #nome:focus~label[for='nome'] {
             background-color: white;
             top: -47px;
         }
         
-        input[type='url']:focus~label[for='site'] {
+        #site:focus~label[for='site'],
+        #site:valid~label[for='site'] {
             background-color: white;
             top: -47px;
         }
         
-        input[type='email']:focus~label[for='email'] {
+        #email:focus~label[for='email'],
+        #email:valid~label[for='email'] {
             background-color: white;
             top: -47px;
         }
         
-        input[type='tel']:focus~label[for='tel'] {
+        #tel:focus~label[for='tel'],
+        #tel:valid~label[for='tel'] {
             background-color: white;
             top: -47px;
         }
